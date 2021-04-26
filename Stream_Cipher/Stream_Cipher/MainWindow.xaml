@@ -26,7 +26,7 @@
                         <TextBox
                             Name="LFSR_Seed"
                             Padding="8"
-                            materialDesign:HintAssist.Hint="Input"
+                            materialDesign:HintAssist.Hint="Seed"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}" />
                         <TextBox
                             Name="LFSR_Polynomial"
