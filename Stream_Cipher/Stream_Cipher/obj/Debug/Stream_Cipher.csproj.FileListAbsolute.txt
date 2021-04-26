@@ -19,4 +19,3 @@ C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\S
 C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.csproj.CopyComplete
 C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.exe
 C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.pdb
-C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.csprojAssemblyReference.cache

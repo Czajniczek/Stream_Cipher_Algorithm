@@ -26,25 +26,34 @@ namespace Stream_Cipher
 
         private void Generate_LFSR(object sender, RoutedEventArgs e)
         {
+            string input = LFSR_Input.Text.ToString();
             string seed = LFSR_Seed.Text.ToString();
             string polynomial = LFSR_Polynomial.Text.ToString();
 
-            LFSR_Output.Text = streamCipherService.LFSR_Generator(seed, polynomial);
+            LFSR_Output.Text = streamCipherService.LFSR_Generator(input, seed, polynomial);
         }
 
         private void Encode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
         {
+            string input = Synchronous_Stream_Cipher_Input.Text.ToString();
+            string seed = Synchronous_Stream_Cipher_Seed.Text.ToString();
+            string polynomial = Synchronous_Stream_Cipher_Polynomial.Text.ToString();
 
+            Synchronous_Stream_Cipher_Output.Text = streamCipherService.Synchronous_Stream_Cipher_Encode_Decode(input, seed, polynomial);
         }
 
-        private void Decode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
-        {
+        //private void Decode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
 
         private void Encode_Ciphertext_Autokey(object sender, RoutedEventArgs e)
         {
+            string input = Ciphertext_Autokey_Input.Text.ToString();
+            string seed = Ciphertext_Autokey_Seed.Text.ToString();
+            string polynomial = Ciphertext_Autokey_Polynomial.Text.ToString();
 
+            Ciphertext_Autokey_Output.Text = streamCipherService.Ciphertext_Autokey_Encode(input, seed, polynomial);
         }
 
         private void Decode_Ciphertext_Autokey(object sender, RoutedEventArgs e)
