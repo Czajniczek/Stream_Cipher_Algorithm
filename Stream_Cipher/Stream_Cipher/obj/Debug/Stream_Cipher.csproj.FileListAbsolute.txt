@@ -1,0 +1,15 @@
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\bin\Debug\Stream_Cipher.exe.config
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\bin\Debug\Stream_Cipher.exe
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\bin\Debug\Stream_Cipher.pdb
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.csprojAssemblyReference.cache
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\MainWindow.g.cs
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\App.g.cs
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher_MarkupCompile.cache
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher_MarkupCompile.lref
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\MainWindow.baml
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.g.resources
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.Properties.Resources.resources
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.csproj.GenerateResource.cache
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.csproj.CoreCompileInputs.cache
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.exe
+C:\Studia\Projects\BSK_Stream_Cipher_WPF\Stream_Cipher\Stream_Cipher\obj\Debug\Stream_Cipher.pdb
