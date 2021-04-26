@@ -1,12 +1,138 @@
-﻿<Window x:Class="Stream_Cipher.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Stream_Cipher"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+﻿<Window
+    x:Class="Stream_Cipher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Stream_Cipher"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Stream Cipher"
+    Width="800"
+    Height="450"
+    ResizeMode="NoResize"
+    mc:Ignorable="d">
+
     <Grid>
-        
+        <TabControl HorizontalAlignment="Center">
+            <TabItem
+                Width="260"
+                Height="50"
+                Cursor="Hand"
+                Header="LFSR Generator"
+                Style="{StaticResource MaterialDesignNavigationRailTabItem}"
+                ToolTip="LFSR Generator">
+                <Grid>
+                    <StackPanel Margin="150,15,150,0" ToolTip="">
+                        <TextBox
+                            Name="LFSR_Seed"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Input"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="LFSR_Polynomial"
+                            Margin="0,10,0,10"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Polynomial"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="LFSR_Output"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Output"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                    </StackPanel>
+                    <WrapPanel
+                        Margin="0,220,0,0"
+                        HorizontalAlignment="Center"
+                        ToolTip="">
+                        <Button Click="Generate_LFSR">Generate</Button>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem
+                Width="260"
+                Height="50"
+                Cursor="Hand"
+                Header="Synchronous Stream Cipher"
+                Style="{StaticResource MaterialDesignNavigationRailTabItem}"
+                ToolTip="Synchronous Stream Cipher">
+                <Grid>
+                    <StackPanel Margin="150,15,150,0" ToolTip="">
+                        <TextBox
+                            Name="Synchronous_Stream_Cipher_Input"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Input"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Synchronous_Stream_Cipher_Seed"
+                            Margin="0,10,0,10"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Seed"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Synchronous_Stream_Cipher_Polynomial"
+                            Margin="0,0,0,10"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Polynomial"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Synchronous_Stream_Cipher_Output"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Output"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                    </StackPanel>
+                    <WrapPanel
+                        Margin="0,220,0,0"
+                        HorizontalAlignment="Center"
+                        ToolTip="">
+                        <Button Margin="0,0,15,0" Click="Encode_Synchronous_Stream_Cipher">Encode</Button>
+                        <Button Margin="15,0,0,0" Click="Decode_Synchronous_Stream_Cipher">Decode</Button>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem
+                Width="260"
+                Height="50"
+                Cursor="Hand"
+                Header="Ciphertext Autokey"
+                Style="{StaticResource MaterialDesignNavigationRailTabItem}"
+                ToolTip="Ciphertext Autokey">
+                <Grid>
+                    <StackPanel Margin="150,15,150,0" ToolTip="">
+                        <TextBox
+                            Name="Ciphertext_Autokey_Input"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Input"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Ciphertext_Autokey_Seed"
+                            Margin="0,10,0,10"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Seed"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Ciphertext_Autokey_Polynomial"
+                            Margin="0,0,0,10"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Polynomial"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                        <TextBox
+                            Name="Ciphertext_Autokey_Output"
+                            Padding="8"
+                            materialDesign:HintAssist.Hint="Output"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                    </StackPanel>
+                    <WrapPanel
+                        Margin="0,220,0,0"
+                        HorizontalAlignment="Center"
+                        ToolTip="">
+                        <Button Margin="0,0,15,0" Click="Encode_Ciphertext_Autokey">Encode</Button>
+                        <Button Margin="15,0,0,0" Click="Decode_Ciphertext_Autokey">Decode</Button>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
+
 </Window>
