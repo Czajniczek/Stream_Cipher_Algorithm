@@ -24,6 +24,7 @@ namespace Stream_Cipher
             InitializeComponent();
         }
 
+        #region ZADANIE 1
         private void Generate_LFSR(object sender, RoutedEventArgs e)
         {
             string input = LFSR_Input.Text.ToString();
@@ -32,8 +33,10 @@ namespace Stream_Cipher
 
             LFSR_Output.Text = streamCipherService.LFSR_Generator(input, seed, polynomial);
         }
+        #endregion
 
-        private void Encode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
+        #region ZADANIE 2
+        private void Encode_Decode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
         {
             string input = Synchronous_Stream_Cipher_Input.Text.ToString();
             string seed = Synchronous_Stream_Cipher_Seed.Text.ToString();
@@ -41,12 +44,9 @@ namespace Stream_Cipher
 
             Synchronous_Stream_Cipher_Output.Text = streamCipherService.Synchronous_Stream_Cipher_Encode_Decode(input, seed, polynomial);
         }
+        #endregion
 
-        //private void Decode_Synchronous_Stream_Cipher(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
+        #region ZADANIE 3
         private void Encode_Ciphertext_Autokey(object sender, RoutedEventArgs e)
         {
             string input = Ciphertext_Autokey_Input.Text.ToString();
@@ -58,7 +58,12 @@ namespace Stream_Cipher
 
         private void Decode_Ciphertext_Autokey(object sender, RoutedEventArgs e)
         {
+            string input = Ciphertext_Autokey_Input.Text.ToString();
+            string seed = Ciphertext_Autokey_Seed.Text.ToString();
+            string polynomial = Ciphertext_Autokey_Polynomial.Text.ToString();
 
+            Ciphertext_Autokey_Output.Text = streamCipherService.Ciphertext_Autokey_Decode(input, seed, polynomial);
         }
+        #endregion
     }
 }

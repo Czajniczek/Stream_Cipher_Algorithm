@@ -8,123 +8,90 @@ namespace Stream_Cipher
 {
     public class StreamCipherService
     {
+        #region ZADANIE 1
         public string LFSR_Generator(string input, string seed, string polynomial)
         {
-            string output = "";
-            //int counter = 0;
-            //string score = "";
+            string output = "", row;
+            int counter = 0;
 
             for (int i = 0; i < input.Length; i++)
             {
-                int counter = 0;
-                string score = "";
-
                 for (int j = 0; j < polynomial.Length; j++)
                 {
                     if (seed[j] == '1' && polynomial[j] == '1') counter++;
                 }
 
-                if (counter % 2 == 0) score += '0';
-                else score += '1';
+                if (counter % 2 == 0) row = "0";
+                else row = "1";
 
-                seed = seed.Substring(0, seed.Length - 1);
-                score += seed;
-                seed = score;
+                row += seed.Substring(0, seed.Length - 1);
+                seed = row;
+                counter = 0;
 
-                output += score[0];
+                output += row[0];
             }
 
             return output;
         }
-
-        #region Synchronous_Stream_Cipher
-        public string Synchronous_Stream_Cipher_Encode_Decode(string input, string seed, string polynomial)
-        {
-            string output = "";
-            string LFSR = LFSR_Generator(input, seed, polynomial);
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                output += input[i] ^ LFSR[i]; //"^" - XOR
-            }
-
-            return output;
-        }
-
-        //public char XOR(char a, char b)
-        //{
-        //    return a == b ? '0' : '1';
-        //}
         #endregion
 
-        public string Ciphertext_Autokey_Encode(string input, string seed, string polynomial)
+        #region ZADANIE 2
+        public string Synchronous_Stream_Cipher_Encode_Decode(string input, string seed, string polynomial)
         {
-            string output = "";
+            string output = "", LFSR = LFSR_Generator(input, seed, polynomial);
 
             for (int i = 0; i < input.Length; i++)
             {
-                string score = "";
-                int counter = 0;
-
-                for (int j = 0; j < polynomial.Length; j++)
-                {
-                    if (seed[j] == '1' && polynomial[j] == '1') counter++;
-                }
-
-                counter = counter % 2;
-
-                char origin = '\0';
-                if (counter == 0) origin = '0';
-                else origin = '1';
-
-                seed = seed.Substring(0, seed.Length - 1);
-
-                var output2 = Convert.ToInt32(input[i]) ^ Convert.ToInt32(origin);
-
-                score += output2;
-                score += seed;
-
-                seed = score;
-
-                output += output2;
+                output += input[i] ^ LFSR[i];
             }
 
             return output;
+        }
+        #endregion
+
+        #region ZADANIE 3
+        public string Ciphertext_Autokey_Encode(string input, string seed, string polynomial)
+        {
+            return Ciphertext_Autokey(input, seed, polynomial, "encode");
         }
 
         public string Ciphertext_Autokey_Decode(string input, string seed, string polynomial)
         {
-            string output = "";
+            return Ciphertext_Autokey(input, seed, polynomial, "decode");
+        }
+
+        public string Ciphertext_Autokey(string input, string seed, string polynomial, string choose)
+        {
+            string output = "", row = "";
+            char origin;
+            int counter = 0;
 
             for (int i = 0; i < input.Length; i++)
             {
-                string score = "";
-                int counter = 0;
-
                 for (int j = 0; j < polynomial.Length; j++)
                 {
                     if (seed[j] == '1' && polynomial[j] == '1') counter++;
                 }
 
-                counter = counter % 2;
-
-                char origin = '\0';
-                if (counter == 0) origin = '0';
+                if (counter % 2 == 0) origin = '0';
                 else origin = '1';
 
+                int xor = input[i] ^ origin;
+
+                if (choose == "encode") row += xor;
+                else row += input[i];
+
                 seed = seed.Substring(0, seed.Length - 1);
+                row += seed;
+                seed = row;
+                row = "";
+                counter = 0;
 
-                var output2 = Convert.ToInt32(input[i]) ^ Convert.ToInt32(origin);
-
-                score += input[i];
-                score += seed;
-
-                seed = score;
-
-                output += output2;
+                output += xor;
             }
 
             return output;
         }
+        #endregion
     }
 }

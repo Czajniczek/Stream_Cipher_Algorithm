@@ -14,6 +14,7 @@
 
     <Grid>
         <TabControl HorizontalAlignment="Center">
+            <!--#region ZADANIE 1-->
             <TabItem
                 Width="260"
                 Height="50"
@@ -27,7 +28,7 @@
                             Name="LFSR_Input"
                             Margin="0,0,0,10"
                             Padding="8"
-                            materialDesign:HintAssist.Hint="Input"
+                            materialDesign:HintAssist.Hint="Length"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}" />
                         <TextBox
                             Name="LFSR_Seed"
@@ -55,7 +56,9 @@
                     </WrapPanel>
                 </Grid>
             </TabItem>
+            <!--#endregion-->
 
+            <!--#region ZADANIE 2-->
             <TabItem
                 Width="260"
                 Height="50"
@@ -92,12 +95,14 @@
                         Margin="0,220,0,0"
                         HorizontalAlignment="Center"
                         ToolTip="">
-                        <Button Margin="0,0,15,0" Click="Encode_Synchronous_Stream_Cipher">Encode</Button>
-                        <Button Margin="15,0,0,0" Click="Encode_Synchronous_Stream_Cipher">Decode</Button>
+                        <Button Margin="0,0,15,0" Click="Encode_Decode_Synchronous_Stream_Cipher">Encode</Button>
+                        <Button Margin="15,0,0,0" Click="Encode_Decode_Synchronous_Stream_Cipher">Decode</Button>
                     </WrapPanel>
                 </Grid>
             </TabItem>
+            <!--#endregion-->
 
+            <!--#region ZADANIE 3-->
             <TabItem
                 Width="260"
                 Height="50"
@@ -139,6 +144,7 @@
                     </WrapPanel>
                 </Grid>
             </TabItem>
+            <!--#endregion-->
         </TabControl>
     </Grid>
 
