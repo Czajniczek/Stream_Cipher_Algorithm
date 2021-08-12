@@ -1,3 +1,3 @@
 # Stream_Cipher_Algorithm
 
-Stream cipher algorithm in WPF
+Stream cipher algorithm in WPF.
