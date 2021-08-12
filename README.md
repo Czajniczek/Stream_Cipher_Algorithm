@@ -1,1 +1,3 @@
-# BSK_Stream_Cipher_WPF
+# Stream_Cipher_Algorithm
+
+Stream cipher algorithm in WPF
